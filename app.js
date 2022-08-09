@@ -1,5 +1,6 @@
 // import functions and grab DOM elements
-
+import { getPokemans } from './gopeekychu.js';
+import { renderGodlessBeasts } from './renderOMG.js';
 // let state
 
 // set event listeners 
