@@ -1,8 +1,17 @@
-// import functions and grab DOM elements
 
-// let state
+import { getPokemans } from './gopeekychu.js';
+import { renderPokemonCard } from './renderOMG.js';
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+const pokeballContainer = document.getElementById('pokeball-container');
+
+window.addEventListener('load', async () => {
+    const pokemans = await getPokemans();
+
+    for (let pokemon of pokemans) {
+        const pokeEl = renderPokemonCard(pokemon);
+
+        pokeballContainer.append(pokeEl);
+    }
+
+});
+
