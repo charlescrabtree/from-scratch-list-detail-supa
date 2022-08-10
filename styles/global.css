@@ -1,23 +1,19 @@
-:root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
-    --footer-background: rgb(243, 242, 242);
-}
-
 body {
     height: 100vh;
     font-family: 'Rubik', san-serif;
-    background: var(--background);
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    background-color: rgb(4, 115, 78);
 }
 
 header {
-    position: sticky;
-    top: 0;
+    position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: var(--header-background);
+
+}
+
+#arceus {
+    justify-content: center;
 }
 
 main {
@@ -31,5 +27,14 @@ footer {
     font-size: .8em;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--footer-background);
+}
+
+#pokeball-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 300px;
+    margin: 5px;
 }
