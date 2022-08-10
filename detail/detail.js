@@ -19,7 +19,6 @@ async function loadData() {
     const id = params.get('id');
 
     const pokemon = await getPokemon(id);
-    console.log(pokemon);
 
     const pokemonDetailEl = renderPokemonDetail(pokemon);
     pokemonDetailContainer.append(pokemonDetailEl);
