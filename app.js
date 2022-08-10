@@ -2,9 +2,9 @@
 import { getPokemans } from './gopeekychu.js';
 import { renderPokemonCard } from './renderOMG.js';
 // let state
-const pokeballContainer = document.getElementById('pokeball-container')
+const pokeballContainer = document.getElementById('pokeball-container');
 // set event listeners 
-window.addEventListener('load', async() => {
+window.addEventListener('load', async () => {
     const pokemans = await getPokemans();
 
     for (let pokemon of pokemans) {

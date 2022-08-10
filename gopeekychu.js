@@ -9,19 +9,15 @@ export async function getPokemans() {
         .from('pokemon')
         .select();
 
-    return checkError(response);
+    return response.data;
 }
 
 export async function getPokemon(id) {
     const response = await client
         .from('pokemon')
         .select()
-        .match({ id: id })
+        .match({ id })
         .single();
     
-    return checkError(response);
-}
-
-function checkError({ data, error }) {
-    return error ? console.error(error) : data;
+    return response.data;
 }

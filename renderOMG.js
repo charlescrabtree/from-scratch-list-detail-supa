@@ -5,10 +5,11 @@ export function renderPokemonCard(pokemon) {
     const p = document.createElement('p');
 
     div.classList.add('pokemon-card');
+    console.log('render-pokemon', pokemon);
 
     p.textContent = pokemon.name;
-    img.src = `./assets/${pokemon.name}`;
-    a.href = `./detail/?id=${pokemon.id}`;
+    img.src = `./assets/${pokemon.name}.png`;
+    a.href = `/detail/?id=${pokemon.id}`;
 
     div.append(p, img);
 
